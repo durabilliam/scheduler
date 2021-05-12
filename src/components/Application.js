@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "components/Application.scss";
 import DayList from "components/DayList"
+import Appointment from "components/Appointment"
 
 const appointments = [
   {
@@ -22,7 +23,11 @@ const appointments = [
   },
   {
     id: 3,
-    time: "12pm",
+    time: "2pm",
+  },
+  {
+    id: 4,
+    time: "3pm",
     interview: {
       student: "Miller-Lite",
       interviewer: {
@@ -33,8 +38,8 @@ const appointments = [
     }
   },
   {
-    id: 4,
-    time: "12pm",
+    id: 5,
+    time: "4pm",
     interview: {
       student: "Buddy Lite",
       interviewer: {
@@ -45,8 +50,8 @@ const appointments = [
     }
   },
   {
-    id: 5,
-    time: "1pm",
+    id: 6,
+    time: "5pm",
     interview: {
       student: "Lydia Miller-Jones",
       interviewer: {
@@ -80,8 +85,6 @@ const days = [
 
 export default function Application(props) {
   let [day, setDay] = useState("Monday")
-   
-
 
   return (
     <main className="layout">
@@ -107,6 +110,10 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
+        {appointments.map(appointment => {
+          return <Appointment key={appointment.id} {...appointment} />
+        })}
+        <Appointment key="last" time="5pm" />
         {/* Replace this with the schedule elements durint the "The Scheduler" activity. */}
       </section>
     </main>
