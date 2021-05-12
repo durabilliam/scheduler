@@ -15,15 +15,6 @@ export default function InterviewerList(props) {
 
   //let { interviewers } = props;
   const interviewers = props.interviewers.map(interviewer => {
-  
-    // const handleChange = (event) => {
-    //   //evt.preventDefault();
-    //   props.addItem(input);
-    //   handleInput("");
-    //   setInterviewer({ ...interviewer, [event.target.name]: event.target.value })
-    // }
-  
-
 
     return ( 
     <InterviewerListItem 
