@@ -79,16 +79,27 @@ export default function Application(props) {
   });
 
   const dailyAppointments = getAppointmentsForDay(state, state.day)
+  
+  // const schedule = dailyAppointments.map((appointment) => {
+  //   const interview = getInterview(state, appointment.interview);
+  //   return (
+  //     <Appointment
+  //       key={appointment.id}
+  //       id={appointment.id}
+  //       time={appointment.time}
+  //       interview={interview}
+  //     />
+  //   );
+  // });
 
-  console.log("BBB", state.appointments)
   useEffect(() => {
     const daysUrl = `/api/days`;
     const appointmentsUrl =  `/api/appointments`;
-    //const interviewersUrl =  `/api/interviewers`;
+    const interviewersUrl =  `/api/interviewers`;
     Promise.all([
       axios.get(daysUrl),
       axios.get(appointmentsUrl),
-      //axios.get(interviewersUrl)
+      axios.get(interviewersUrl)
 
     ]).then((all) => {
       console.log(all[1].data) 
@@ -96,7 +107,7 @@ export default function Application(props) {
             ...prev,
       days: all[0].data,
       appointments: all[1].data,
-      //interviewers: all[2].data
+      interviewers: all[2].data
       })) 
     })
   }, [])
@@ -133,9 +144,7 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
-        { console.log("FIRST", dailyAppointments),
-          dailyAppointments.map(appointment => {
-          console.log("GFDS", appointment)
+        {dailyAppointments.map(appointment => {
           return <Appointment key={appointment.id} {...appointment} />
         })}
         {/* Replace this with the schedule elements durint the "The Scheduler" activity. */}
