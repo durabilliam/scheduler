@@ -4,8 +4,6 @@ const classNames = require('classnames');
 
 
 export default function InterviewerListItem(props) {
-  console.log("here_ListItem", props)
-
 
   const interviewerClass = classNames("interviewers__item", {
     'interviewers__item--selected': props.selected === true,

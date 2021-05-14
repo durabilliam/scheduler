@@ -27,8 +27,6 @@ export default function InterviewerList(props) {
    );
   });
 
-  console.log("Here_list", props)
-  console.log(interviewers)
   return (
     <section className="interviewers">
       <h4 className="interviewers__header text--light">Interviewer</h4>
