@@ -35,28 +35,9 @@ export default function Application(props) {
   }
 
   function cancelInterview(id) {
-    
-    console.log("xxx", id)
     return axios.delete(`/api/appointments/${id}`)
-      .then (response => { 
-        // const appointment = {
-        //   ...state.appointments[id],
-        //   interview: null
-        // };
-        // const appointments = {
-        //   ...state.appointments,
-        //   [id]: appointment
-        // };
-        // for (const appointment in appointments)
-        //   if (appointments[appointment] === id){
-        //   appointments[appointment].interview = null;
-        //   }
-        //setState({...state, appointments})   
-      })
-        
-        
-     
-        //console.log("HHHHJ", appointments[id])})
+      .then (response => { })
+    
   }
   
 
