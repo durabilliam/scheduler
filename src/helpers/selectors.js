@@ -35,3 +35,17 @@ export function getInterviewersForDay(state, day) {
   });
   return interviewersForDay;
 }
+
+export function getDayforSpots(state, day) {
+
+  const daysInterviewers = state.days.find(d => d.name === day)
+    if(daysInterviewers === undefined){
+      return [];
+    }
+
+    const interviewersForDay = daysInterviewers.interviewers.map(id => {
+    return state.interviewers[id];
+
+  });
+  return interviewersForDay;
+}

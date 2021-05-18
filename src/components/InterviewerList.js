@@ -4,27 +4,34 @@ import InterviewerListItem from "components/InterviewerListItem"
 import PropTypes from "prop-types";
 
 
+// InterviewerList.propTypes = {
+//   value: PropTypes.number,
+//   onChange: PropTypes.func.isRequired
+// };
+
 InterviewerList.propTypes = {
-  value: PropTypes.number,
-  onChange: PropTypes.func.isRequired
+  interviewers: PropTypes.array.isRequired
 };
+
 
 export default function InterviewerList(props) {
 
-
-
-  //let { interviewers } = props;
+  // console.log(props)
+  // props = props.toString()
+  // console.log(props)
+  //{ interviewers } = props;
   const interviewers = props.interviewers.map(interviewer => {
 
-    return ( 
-    <InterviewerListItem 
-      key={interviewer.id}
-      name={interviewer.name} 
-      avatar={interviewer.avatar}
-      selected={interviewer.id === props.value}
-      setInterviewer={event => props.onChange(interviewer.id)}
-    />
-   );
+
+    return (
+      <InterviewerListItem
+        key={interviewer.id}
+        name={interviewer.name}
+        avatar={interviewer.avatar}
+        selected={interviewer.id === props.value}
+        setInterviewer={event => props.onChange(interviewer.id)}
+      />
+    );
   });
 
   return (
@@ -33,5 +40,5 @@ export default function InterviewerList(props) {
       <ul className="interviewers__list">{interviewers}</ul>
     </section>
   )
-    
+
 };
