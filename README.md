@@ -1,11 +1,11 @@
 # Interview Scheduler
 
-The interview Scheduler is a simple and easy to use interface where users can book, edit, or delete an interview time. It has a smooth front end user interface thanks to React.js. This project was originally copied from a LightHouse Labs repository that included the base styles, images, and configuration. As a first time React user my goal was broken into four main steps. Build components in isolation, build and render data from APIs, manage the visual state and finally use some advanced React apllications to handle live updating and state.  Much of the development testing included using Storybook, Jest, Webpack Dev Server, and Cypress. 
+The interview Scheduler is a simple and easy to use application that let's users book, edit, or delete an interview time. It has a smooth front end user interface thanks to React.js. This project was originally copied from a LightHouse Labs repository that included the base styles, images, and configuration. As a first time React user my goal was broken into four main steps. Build components in isolation, build and render data from APIs, manage the visual state and finally use some advanced React apllications to handle live updating and state.  Much of the development testing included using Storybook, Jest, Webpack Dev Server, and Cypress. 
 
 ## Screenshots
 
-!["screenshot of Interview Scheduler"](https://github.com/durabilliam/tweeter/blob/master/docs/tweeter1.png)
-!["screenshot of Interview Scheduler in tablet view"](https://github.com/durabilliam/tweeter/blob/master/docs/tweeder2.png)
+!["screenshot of Interview Scheduler"](https://github.com/durabilliam/scheduler/blob/master/docs/Scheduler_full_screen.png)
+!["screenshot of Interview Scheduler in tablet view"](https://github.com/durabilliam/scheduler/blob/master/docs/Schedular_tablet.png)
 
 
 ## Getting Started
